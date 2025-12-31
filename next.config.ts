@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
       bodySizeLimit: '10mb',
     },
   },
+  // Empty turbopack config to silence the warning when using webpack
+  turbopack: {},
   webpack: (config, { isServer }) => {
     if (isServer) {
       // Handle canvas for server-side rendering
